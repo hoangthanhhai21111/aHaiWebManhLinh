@@ -17,7 +17,7 @@
                         </span></a>
                       <div class="dropdown-menu">
                          <a class="dropdown-item" href="
-                         {{-- {{route('users.profile')}} --}}
+                         {{route('users.profile')}}
                          ">Thông Tin</a>
                          <a class="dropdown-item" href="
                          {{ route('login.logout') }}

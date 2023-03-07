@@ -45,7 +45,7 @@
                         </div>
                         <div class="form-group">
                             <label for="tf1"><b>Nội dung chính</b><abbr name="Trường bắt buộc">*</abbr></label>
-                            <textarea name="content" class="form-control" value="" id="ckeditor1" rows="4" style="resize: none">{{ old('content') }}</textarea>
+                            <textarea name="content" class="form-control" value="" id="ckeditor1" rows="4" style="resize: none">{{  old('content') ?? $posts    ->content }}</textarea>
                             @if ($errors->any())
                                 <p style="color:red">*{{ $errors->first('content') }}</p>
                             @endif

@@ -3,6 +3,7 @@
 use App\Http\Controllers\BannerController;
 use App\Http\Controllers\frondend\HomeController;
 use App\Http\Controllers\GroupController;
+use App\Http\Controllers\KhoaHocController;
 use App\Http\Controllers\login;
 use App\Http\Controllers\PostController;
 use App\Http\Controllers\UserController;
@@ -26,10 +27,16 @@ Route::prefix('groups')->group(function () {
     Route::get('trash', [GroupController::class, 'trash'])->name('groups.trash');
     Route::put('RestoreDelete/{id}', [GroupController::class, 'RestoreDelete'])->name('groups.RestoreDelete');
 });
-Route::get('/', function () {
-    return view('backend.users.profile');
-});
 Route::resource('groups', GroupController::class);
+Route::prefix('khoahoc')->group(function () {
+    Route::put('SoftDeletes/{id}', [KhoaHocController::class, 'softDeletes'])->name('khoahoc.SoftDeletes');
+    Route::get('trash', [khoahocController::class, 'trash'])->name('khoahoc.trash');
+    Route::put('RestoreDelete/{id}', [khoahocController::class, 'RestoreDelete'])->name('khoahoc.RestoreDelete');
+});
+Route::resource('khoahoc', khoahocController::class);
+Route::get('profile', function () {
+    return view('backend.users.profile');
+})->name('users.profile');
 Route::prefix('posts')->group(function () {
     Route::put('SoftDeletes/{id}', [PostController::class, 'softDeletes'])->name('posts.SoftDeletes');
     Route::get('trash', [PostController::class, 'trash'])->name('posts.trash');
