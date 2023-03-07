@@ -142,11 +142,11 @@
                 </div>
                 <!-- footer -->
                 <div class="container-fluid">
-                    <div class="footer">
+                    {{-- <div class="footer">
                        <p>Bản quyền © 2018 Được thiết kế bởi html.design. Đã đăng ký Bản quyền.<br><br>
                          Phân phối bởi: <a href="https://themewagon.com/">ThemeWagon</a>
                        </p>
-                    </div>
+                    </div> --}}
                 </div>
             </div>
             <!-- end dashboard inner -->
