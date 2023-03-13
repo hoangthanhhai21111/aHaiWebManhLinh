@@ -13,11 +13,11 @@
             <h1 class="page-title mr-sm-auto">Danh mục nhân viên đã xóa</h1>
             <div class="btn-toolbar">
                 {{-- @can('create', App\Models\category::class) --}}
-                <div class="input-group-prepend">
+                {{-- <div class="input-group-prepend"> --}}
+                    <div class="md-5 title_cate d-flex">
                     <button class="btn btn-secondary" type="button" data-toggle="modal"
                         data-target="#modalFilterColumns">Tìm nâng cao</button>
-                </div>
-                <div class="md-5 title_cate d-flex">
+                {{-- </div> --}}
                     <div class="form-outline">
                         <form action="">
                             <input type="search" value="{{ $f_key }}" name="key" id="form1"

@@ -52,7 +52,7 @@
                                 @endif
                             </div>
                             <div class="form-group">
-                                <label for="tf1"><b>Mô Tả</b><abbr name="Trường bắt buộc">*</abbr></label>
+                                <label for="tf1"><b>Tóm tắt nội dung</b><abbr name="Trường bắt buộc">*</abbr></label>
                                 <textarea name="description" class=" ckeditor form-control" value="" id="ckeditor4" rows="4" style="resize: none">{{ old('content') }}</textarea>
                                 @if ($errors->any())
                                     <p style="color:red">*{{ $errors->first('content') }}</p>

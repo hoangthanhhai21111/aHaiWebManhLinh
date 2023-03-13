@@ -7,15 +7,17 @@
 
 <head>
     <meta charset="UTF-8" />
+    <link rel="shortcut icon" type="image/png" href="/favicon.png"/>
+    {{-- <link rel="shortcut icon" content ="text/html" href="{{ asset('themeAdmin/images/logo/logo.png') }}"> --}}
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
-    {{-- <link rel="profile" href="https://gmpg.org/xfn/11" /> --}}
-    {{-- <link rel="pingback" href="https://quanggroup.vn/xmlrpc.php" /> --}}
-    <script>
+
+    {{-- <script>
         (function(html) {
             html.className = html.className.replace(/\bno-js\b/, 'js')
         })(document.documentElement);
-    </script>
+        </script> --}}
     <meta name='robots' content='index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1' />
+
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
     <!-- This site is optimized with the Yoast SEO plugin v16.9 - https://yoast.com/wordpress/plugins/seo/ -->
     <title>Trung Tâm Sát Hạch Mạnh Linh</title>
@@ -23,10 +25,9 @@
     <meta property="article:modified_time" content="2021-12-02T09:26:47+00:00" />
     {{-- <meta property="og:image" content="https://quanggroup.vn/wp-content/uploads/2020/12/bg_content.png" /> --}}
     <meta name="twitter:card" content="summary_large_image" />
-    <script type="application/ld+json" class="yoast-schema-graph">{"@context":"https://schema.org","@graph":[{"@type":"WebSite","@id":"https://quanggroup.vn/#website","url":"https://quanggroup.vn/","name":"Quang Group","description":"Quang Group Qu\u1ea3ng Tr\u1ecb","potentialAction":[{"@type":"SearchAction","target":{"@type":"EntryPoint","urlTemplate":"https://quanggroup.vn/?s={search_term_string}"},"query-input":"required name=search_term_string"}],"inLanguage":"vi"},{"@type":"ImageObject","@id":"https://quanggroup.vn/#primaryimage","inLanguage":"vi","url":"https://quanggroup.vn/wp-content/uploads/2020/12/bg_content.png","contentUrl":"https://quanggroup.vn/wp-content/uploads/2020/12/bg_content.png"},{"@type":"WebPage","@id":"https://quanggroup.vn/#webpage","url":"https://quanggroup.vn/","name":"C\u00f4ng ty C\u1ed5 ph\u1ea7n B\u1ea5t \u0111\u1ed9ng s\u1ea3n Quang Group - Quang Group","isPartOf":{"@id":"https://quanggroup.vn/#website"},"primaryImageOfPage":{"@id":"https://quanggroup.vn/#primaryimage"},"datePublished":"2020-12-18T14:19:15+00:00","dateModified":"2021-12-02T09:26:47+00:00","description":"C\u00f4ng Ty C\u1ed5 Ph\u1ea7n B\u1ea5t \u0110\u1ed9ng S\u1ea3n Quang Group. L\u00e0 M\u1ed9t Trong Nh\u1eefng Doanh Nghi\u1ec7p Tr\u1ebb Ti\u00eau Bi\u1ec3u Trong L\u0129nh V\u1ef1c B\u1ea5t \u0110\u1ed9ng S\u1ea3n T\u1ea1i Qu\u1ea3ng Tr\u1ecb.","breadcrumb":{"@id":"https://quanggroup.vn/#breadcrumb"},"inLanguage":"vi","potentialAction":[{"@type":"ReadAction","target":["https://quanggroup.vn/"]}]},{"@type":"BreadcrumbList","@id":"https://quanggroup.vn/#breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"name":"Trang ch\u1ee7"}]}]}</script>
+    {{-- <script type="application/ld+json" class="yoast-schema-graph">{"@context":"https://schema.org","@graph":[{"@type":"WebSite","@id":"https://quanggroup.vn/#website","url":"https://quanggroup.vn/","name":"Quang Group","description":"Quang Group Qu\u1ea3ng Tr\u1ecb","potentialAction":[{"@type":"SearchAction","target":{"@type":"EntryPoint","urlTemplate":"https://quanggroup.vn/?s={search_term_string}"},"query-input":"required name=search_term_string"}],"inLanguage":"vi"},{"@type":"ImageObject","@id":"https://quanggroup.vn/#primaryimage","inLanguage":"vi","url":"https://quanggroup.vn/wp-content/uploads/2020/12/bg_content.png","contentUrl":"https://quanggroup.vn/wp-content/uploads/2020/12/bg_content.png"},{"@type":"WebPage","@id":"https://quanggroup.vn/#webpage","url":"https://quanggroup.vn/","name":"C\u00f4ng ty C\u1ed5 ph\u1ea7n B\u1ea5t \u0111\u1ed9ng s\u1ea3n Quang Group - Quang Group","isPartOf":{"@id":"https://quanggroup.vn/#website"},"primaryImageOfPage":{"@id":"https://quanggroup.vn/#primaryimage"},"datePublished":"2020-12-18T14:19:15+00:00","dateModified":"2021-12-02T09:26:47+00:00","description":"C\u00f4ng Ty C\u1ed5 Ph\u1ea7n B\u1ea5t \u0110\u1ed9ng S\u1ea3n Quang Group. L\u00e0 M\u1ed9t Trong Nh\u1eefng Doanh Nghi\u1ec7p Tr\u1ebb Ti\u00eau Bi\u1ec3u Trong L\u0129nh V\u1ef1c B\u1ea5t \u0110\u1ed9ng S\u1ea3n T\u1ea1i Qu\u1ea3ng Tr\u1ecb.","breadcrumb":{"@id":"https://quanggroup.vn/#breadcrumb"},"inLanguage":"vi","potentialAction":[{"@type":"ReadAction","target":["https://quanggroup.vn/"]}]},{"@type":"BreadcrumbList","@id":"https://quanggroup.vn/#breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"name":"Trang ch\u1ee7"}]}]}</script> --}}
     <meta name="google-site-verification" content="GjxSHXs1aRkseBsZ8UbNkwc5JyVwSL5OemRJ30MxYpY" />
     <!-- / Yoast SEO plugin. -->
-
 
     <script type="text/javascript">
         window._wpemojiSettings = {
@@ -102,6 +103,7 @@
     </style>
     <link rel='stylesheet' id='wp-block-library-css'
         href='{{ asset('wp-includes/css/dist/block-library/style.min.css') }}' type='text/css' media='all' />
+
     <style id='global-styles-inline-css' type='text/css'>
         body {
             --wp--preset--color--black: #000000;
@@ -371,8 +373,8 @@
     {{-- <link rel="https://api.w.org/" href="https://quanggroup.vn/wp-json/" /><link rel="alternate" type="application/json" href="https://quanggroup.vn/wp-json/wp/v2/pages/2" /><link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://quanggroup.vn/xmlrpc.php?rsd" /> --}}
     <link rel="wlwmanifest" type="application/wlwmanifest+xml"
         href="https://quanggroup.vn/wp-includes/wlwmanifest.xml" />
-    <meta name="generator" content="WordPress 5.9.5" />
-    <link rel='shortlink' href='https://quanggroup.vn/' />
+    {{-- <meta name="generator" content="WordPress 5.9.5" /> --}}
+    {{-- <link rel='shortlink' href='https://quanggroup.vn/' /> --}}
     {{-- <link rel="alternate" type="application/json+oembed" href="https://quanggroup.vn/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fquanggroup.vn%2F" />
 <link rel="alternate" type="text/xml+oembed" href="https://quanggroup.vn/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fquanggroup.vn%2F&#038;format=xml" /> --}}
     <!-- Google Tag Manager -->
@@ -1092,8 +1094,8 @@
             </div>
         </div>
         <div class="hotline-bar">
-            <a href="tel:0941103777">
-                <span class="text-hotline">0941 103 777</span>
+            <a href="tel:𝟎𝟑𝟑𝟐𝟒𝟗𝟖𝟎𝟕𝟐">
+                <span class="text-hotline">𝟎𝟑𝟑𝟐𝟒𝟗𝟖𝟎𝟕𝟐</span>
             </a>
         </div>
     </div>
@@ -1144,5 +1146,6 @@
     <script type='text/javascript' src='{{ asset('wp-content/themes/flatsome/assets/libs/packery.pkgd.min.js') }}'
         id='flatsome-masonry-js-js'></script>
 </body>
+
 
 </html>

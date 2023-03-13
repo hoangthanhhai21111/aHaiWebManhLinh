@@ -10,13 +10,11 @@
                 </ol>
             </nav>
             <div class="d-md-flex align-items-md-start">
-                <h1 class="page-title mr-sm-auto">Quản lý bài viết</h1>
+                <h1 class="page-title mr-sm-auto">Quản lý bài viết đã xóa</h1>
                 <div class="btn-toolbar">
-                    <div class="input-group-prepend">
+                    <div class="md-5 title_cate d-flex">
                         <button class="btn btn-secondary" type="button" data-toggle="modal"
                             data-target="#modalFilterColumns">Tìm nâng cao</button>
-                    </div>
-                    <div class="md-5 title_cate d-flex">
                         <div class="form-outline">
                             <form action="" method="GET" id="form-search">
                                 <input type="search" value="{{ $f_key }}" name="key" id="form1"
@@ -29,6 +27,7 @@
                     </div>
                 </div>
             </div>
+
         </header>
         <div class="page-section">
             <div class="card card-fluid">
@@ -50,7 +49,7 @@
                                     <i class="fa-solid fa fa-plus"></i>
                                     <span class="ml-1">Thêm Mới</span>
                                 </a>
-                                {{-- @include('backend.users.modal') --}}
+                                @include('backend.posts.modal')
                             </form>
                         </div>
                     </div>

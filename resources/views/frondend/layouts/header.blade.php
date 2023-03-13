@@ -1,3 +1,4 @@
+
 <header id="header" class="header has-sticky sticky-jump" style = 'background-color:red '>
     <div class="header-wrapper">
         <div id="top-bar" class="header-top hide-for-sticky nav-dark">
@@ -35,8 +36,8 @@
                                     </a>
                                 </li>
                                 <li class="">
-                                    <a href="tel:02333. 508. 508" class="tooltip" title="02333. 508. 508">
-                                        <i class="bi bi-telephone-fill" style="font-size:16px;"></i> <span>02333. 508. 508</span>
+                                    <a href="tel:𝟎𝟑𝟑𝟐.𝟒𝟗𝟖.𝟎𝟕𝟐" class="tooltip" title="𝟎𝟑𝟑𝟐.𝟒𝟗𝟖.𝟎𝟕𝟐">
+                                        <i class="bi bi-telephone-fill" style="font-size:16px;"></i> <span>𝟎𝟑𝟑𝟐.𝟒𝟗𝟖.𝟎𝟕𝟐</span>
                                     </a>
                                 </li>
                             </ul>
@@ -87,7 +88,7 @@
                         class="header-nav header-nav-main nav nav-right  nav-divided nav-size-large nav-spacing-xlarge nav-uppercase">
                         <li id="menu-item-461"
                             class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item current_page_item menu-item-home menu-item-has-children menu-item-461 active menu-item-design-default has-dropdown">
-                            <a href="#" aria-current="page" class="nav-top-link">TRANG CHỦ</a>
+                            <a href="{{ route('home.index') }}" style="color:{{ (url()->current()==route('home.index'))?'red':'black' }}" aria-current="page" class="nav-top-link">TRANG CHỦ</a>
 
                         </li>
                         <li id="menu-item-951"
@@ -102,18 +103,12 @@
                         </li>
                         <li id="menu-item-450"
                             class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-has-children menu-item-450 menu-item-design-default has-dropdown">
-                            <a href="{{ route('home.su_kien') }}" class="nav-top-link">SỰ KIỆN</a>
+                            <a href="{{ route('home.su_kien') }}"style="color:{{ (url()->current()==route('home.su_kien'))?'red':'black' }}"  class="nav-top-link ">SỰ KIỆN</a>
 
                         </li>
                         <li id="menu-item-148"
                             class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-148 menu-item-design-default has-dropdown">
                             <a href="#" class="nav-top-link">ĐĂNG KÝ</a>
-
-                        </li>
-
-                        <li id="menu-item-119"
-                            class="menu-item menu-item-type-post_type menu-item-object-page menu-item-119 menu-item-design-default">
-                            <a href="#" class="nav-top-link">LIÊN HỆ</a>
                         </li>
                     </ul>
                 </div>

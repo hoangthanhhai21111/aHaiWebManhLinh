@@ -23,7 +23,7 @@
         <ul class="list-unstyled components">
             <li class="active">
                 <a href="#dashboard" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle"><i
-                        class="fa fa-dashboard yellow_color"></i> <span>Nhân Sự</span></a>
+                        class="bi bi-people-fill"></i> <span><h5>Nhân Sự</h5></span></a>
                 <ul class="collapse list-unstyled" id="dashboard">
                     {{-- @can('viewAny', App\Models\User::class) --}}
                         <li>
@@ -39,7 +39,7 @@
             </li>
             <li>
                 <a href="#element" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle"><i
-                        class="fa fa-diamond purple_color"></i> <span>Bài Viết</span></a>
+                        class="bi bi-chat-right-dots"></i> <span><h5>Bài Viết</h5></span></a>
                 <ul class="collapse list-unstyled" id="element">
                     {{-- @can('viewAny', App\Models\Category::class) --}}
                         <li><a href="{{ route('posts.index') }}">> <span>Bài Viết</span></a></li>
@@ -54,7 +54,7 @@
             </li>
             <li>
                 <a href="#apps" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle"><i
-                        class="fa fa-object-group blue2_color"></i> <span>Khách hàng</span></a>
+                        class="bi bi-chat-right-dots"></i> <span><h5>Khách hàng</h5></span></a>
                 <ul class="collapse list-unstyled" id="apps">
                     {{-- @can('viewAny', App\Models\Brand::class) --}}
                     <li><a href="

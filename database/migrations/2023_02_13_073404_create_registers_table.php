@@ -15,9 +15,11 @@ return new class extends Migration
     {
         Schema::create('registers', function (Blueprint $table) {
             $table->id();
-            $table->String('name');
+            $table->String('name')->nullable();
+            $table->string('email')->nullable();
             $table->string('phone')->nullable();
-            $table->string('course');
+            $table->string('course')->nullable();
+            $table->longtext('notepad')->nullable();
             $table->timestamps();
         });
     }
