@@ -27,6 +27,12 @@ class PostController extends Controller
             $query->orWhere('id', $key)->where('deleted_at', '=', null);
             $query->orWhere('title', 'LIKE', '%' . $key . '%')->where('deleted_at', '=', null);
         }
+        if ($category_id) {
+            $query->where('category_id',$category_id)->where('deleted_at', '=', null);
+        }
+        if ($category_id) {
+            $query->where('status',$status)->where('deleted_at', '=', null);
+        }
         $posts = $query->orderBy('id', 'DESC')->where('deleted_at', '=', null)->paginate(5);
         $params = [
             'f_name'         => $name,
@@ -153,8 +159,11 @@ class PostController extends Controller
      }
     }
     function trash(Request $request){
+        $categorys = Category::all();
         $key                    = $request->key ?? '';
         $name                   = $request->name ?? '';
+        $status                 = $request->status ?? '';
+        $category_id            = $request->category_id ?? '';
         $query = Post::query(true);
         if ($name) {
             $query->where('title', 'LIKE', '%' . $name . '%')->where('deleted_at', '!=', null);
@@ -163,11 +172,20 @@ class PostController extends Controller
             $query->orWhere('id', $key)->where('deleted_at', '=', null);
             $query->orWhere('title', 'LIKE', '%' . $key . '%')->where('deleted_at', '!=', null);
         }
+        if ($category_id) {
+            $query->where('category_id',$category_id)->where('deleted_at', '=', null);
+        }
+        if ($category_id) {
+            $query->where('status',$status)->where('deleted_at', '=', null);
+        }
         $posts = $query->orderBy('id', 'DESC')->where('deleted_at', '!=', null)->paginate(5);
         $params = [
             'f_name'         => $name,
             'f_key'          => $key,
             'posts'          => $posts,
+            'f_status'          => $status,
+            'categorys'          => $categorys,
+            'f_category_id'      => $category_id,
         ];
         return view('backend.posts.trash', $params);
     }

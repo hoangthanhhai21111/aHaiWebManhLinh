@@ -13,7 +13,6 @@ return new class extends Migration
     {
         Schema::create('images', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('album_id')->constrained('albums');
             $table->string('file_name');
             $table->timestamps();
         });

@@ -12,8 +12,9 @@
         <h1 class="page-title">Edit Bài Viết</h1>
     </header>
     <div class="page-section">
-        <form method="post" action="{{ route('posts.store') }}" enctype="multipart/form-data">
+        <form method="post" action="{{ route('posts.update',$posts->id) }}" enctype="multipart/form-data">
             @csrf
+            @method('PUT')
             <div class="card">
                 <div class="card-body">
                     <legend>Thông tin cơ bản</legend>
@@ -35,7 +36,7 @@
                                 <select name="category_id" id="" class="form-control @error('category_id') is-invalid @enderror">
                                     <option value="">--Chọn thể loại bài--</option>
                                     @foreach ($categorys as $category)
-                                        <option value="{{ $category->id }}">{{ $category->name }}</option>
+                                        <option value="{{ $category->id }}" {{ $category->id == $posts->category_id ? 'selected' : '' }}>{{ $category->name }}</option>
                                     @endforeach
                                 </select>
                                 @if ($errors->any())
@@ -45,14 +46,14 @@
                         </div>
                         <div class="form-group">
                             <label for="tf1"><b>Nội dung chính</b><abbr name="Trường bắt buộc">*</abbr></label>
-                            <textarea name="content" class="form-control" value="" id="ckeditor1" rows="4" style="resize: none">{{  old('content') ?? $posts    ->content }}</textarea>
+                            <textarea name="content" class="form-control" value="" id="ckeditor1" rows="4" style="resize: none">{{  old('content') ?? $posts->content }}</textarea>
                             @if ($errors->any())
                                 <p style="color:red">*{{ $errors->first('content') }}</p>
                             @endif
                         </div>
                         <div class="form-group">
-                            <label for="tf1"><b>Mô Tả</b><abbr name="Trường bắt buộc">*</abbr></label>
-                            <textarea name="description" class=" ckeditor form-control" value="" id="ckeditor4" rows="4" style="resize: none">{{ old('content') }}</textarea>
+                            <label for="tf1"><b>Tóm tắt nội dung</b><abbr name="Trường bắt buộc">*</abbr></label>
+                            <textarea name="description" class=" ckeditor form-control" value="" id="ckeditor4" rows="4" style="resize: none">{{ old('description') ?? $posts->description }}</textarea>
                             @if ($errors->any())
                                 <p style="color:red">*{{ $errors->first('content') }}</p>
                             @endif
@@ -62,9 +63,9 @@
                         <div class="col-lg-4">
                             <div class="mb-2">
                                 <label for="tf1"><b>Trạng Thái</b><abbr name="Trường bắt buộc">*</abbr></label><br>
-                                <input type="radio" id="html" name="status" value="0">
+                                <input type="radio" id="html" name="status" value="0" {{ $posts->status == 0? 'checked' : '' }}>
                                 <label for="html">Ẩn </label>&nbsp
-                                <input type="radio" id="css" name="status" value="1">
+                                <input type="radio" id="css" name="status" value="1" {{ $posts->status == 1? 'checked' : '' }}>
                                 <label for="css">Hiện</label>&nbsp
                                 @if ($errors->any())
                                     <p style="color:red">*{{ $errors->first('status') }}</p>

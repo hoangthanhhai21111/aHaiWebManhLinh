@@ -154,7 +154,7 @@
                                                     </div>
                                                 </div>
                                                 <div id="text-2151010940" class="text">
-                                                    <p>{!! $thongbao->description !!}</p>
+                                                    <p>{!! Str::words($thongbao->description,50) !!}</p>
 
                                                     <style>
                                                         #text-2151010940 {
@@ -194,8 +194,7 @@
                     <div id="col-1327100458" class="col medium-4 small-12 large-4">
                         <div class="col-inner">
                             <h2 class="uppercase"><span style="color: #ed1c24;">TIN TỨC &#8211; SỰ KIỆN</span></h2>
-                            <p>Nơi cập nhật các tin tức nhanh nhất về các thông tin bất động sản, Ô tô, khóa học của tập
-                                đoàn Quang Group</p>
+                            <p>Nơi cập nhật các tin tức nhanh nhất về các thông tin lớp khai giảng, lịch thi,...</p>
                             <a href="#" target="_self" class="button alert is-outline">
                                 <span>Xem Thêm</span>
                                 <i class="bi bi-caret-right-fill"></i></a>
@@ -224,7 +223,7 @@
                                                         <div class="box-text-inner blog-post-inner">
                                                             <h5 class="post-title is-large ">{{ $tintuc->title }}</h5>
                                                             <div class="is-divider"></div>
-                                                            <p class="from_the_blog_excerpt ">{!! $tintuc->description !!} [...]
+                                                            <p class="from_the_blog_excerpt ">{!! Str::words($tintuc->description,50)!!} [...]
                                                             </p>
 
                                                         </div>

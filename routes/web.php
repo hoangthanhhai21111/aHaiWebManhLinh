@@ -1,5 +1,4 @@
 <?php
-
 use App\Http\Controllers\BannerController;
 use App\Http\Controllers\frondend\HomeController;
 use App\Http\Controllers\GroupController;
@@ -54,6 +53,19 @@ Route::resource('videos', VideoController::class);
 });
 Route::prefix('')->group(function () {
      route::get('/',[HomeController::class,'index'])->name('home.index');
-     route::get('su-kien',[HomeController::class,'tintuc'])->name('home.su_kien');
+     route::get('/show/{id}',[HomeController::class,'show'])->name('home.show');
+     Route::prefix('su-kien')->group(function () {
+     route::get('',[HomeController::class,'tintuc'])->name('home.su_kien');
+     route::get('{id}',[HomeController::class,'show'])->name('home.show');
+    });
+    Route::prefix('thong-bao')->group(function () {
+        route::get('',[HomeController::class,'thongbao'])->name('home.thong_bao');
+       });
+    Route::prefix('dang-Ky')->group(function () {
+        route::get('',[HomeController::class,'dangky'])->name('home.dang_ky');
+    });
+    // Route::prefix('tho-bao')->group(function () {
+    //     route::get('',[HomeController::class,'thongbao'])->name('home.thong-bao');
+    // });
 });
 

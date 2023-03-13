@@ -12,11 +12,12 @@
             <div class="d-md-flex align-items-md-start">
                 <h1 class="page-title mr-sm-auto">Quản lý bài viết</h1>
                 <div class="btn-toolbar">
-                    <div class="input-group-prepend">
+                    <div class="md-5 title_cate d-flex">
+                        {{-- <div class="input-group-prepend"> --}}
                         <button class="btn btn-secondary" type="button" data-toggle="modal"
                             data-target="#modalFilterColumns">Tìm nâng cao</button>
-                    </div>
-                    <div class="md-5 title_cate d-flex">
+                        {{-- </div> --}}
+
                         <div class="form-outline">
                             <form action="" method="GET" id="form-search">
                                 <input type="search" value="{{ $f_key }}" name="key" id="form1"
@@ -84,7 +85,7 @@
                                     <th>
                                         <H6>Ảnh Bìa</H6>
                                     </th>
-                                    <th>
+                                    <th style="width:300px">
                                         <H6>Tiêu Đề </H6>
                                     </th>
                                     <th>
@@ -108,7 +109,10 @@
                                         </td>
                                         <td><a href="{{ route('posts.show', $post->id) }}">{{ $post->title }}</a></td>
                                         <td>{{ $post->category->name }}</td>
-                                        <td><h6 style = "color:{{ $post->status ? 'red' : 'blue' }}">{{ $post->status ? 'hiện' : 'ẩn' }}</h6></td>
+                                        <td>
+                                            <h6 style="color:{{ $post->status ? 'red' : 'blue' }}">
+                                                {{ $post->status ? 'hiện' : 'ẩn' }}</h6>
+                                        </td>
                                         <td>
                                             <form action="{{ route('posts.SoftDeletes', $post->id) }}" method="post">
                                                 {{-- @can('update', App\Models\User::class)
